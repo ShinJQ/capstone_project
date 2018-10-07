@@ -1,7 +1,14 @@
 from ytcc.download import Download
-from ytcl.crawl import video_crawl
+from ytcl.sel_crawl import video_crawl
+downld=Download()
 crawl=video_crawl()
-aa="https://www.youtube.com/channel/UCy-H-BPCHctNmUb80MeapvQ/videos"
-id=crawl.get_video_id(aa)
-#captions=downld.get_captions(vid_id)
+dict_id=crawl.get_id('https://www.youtube.com/user/TEDtalksDirector/videos')
 
+
+captions=downld.get_captions()
+print(captions)
+print(type(captions))
+
+text_file = open("%s.txt"%id, "w")
+text_file.write(captions)
+text_file.close()

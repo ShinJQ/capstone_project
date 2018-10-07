@@ -36,7 +36,6 @@ class Download():
             output = self.get_captions_from_output(f.read())
         storage.remove_file()
         return output
-
     def get_result(self, video_id: str) -> int:
         with youtube_dl.YoutubeDL(self.opts) as ydl:
             try:
