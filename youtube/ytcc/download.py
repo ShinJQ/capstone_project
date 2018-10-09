@@ -15,7 +15,8 @@ class Download():
     def __init__(self, opts: dict = {}) -> None:
         self.opts = {
             'skip_download': True,
-            'writeautomaticsub': True,
+            'writesubtitles': True,
+            'subtitleslangs':['en'],
             'outtmpl': 'subtitle_%(id)s'
         }
         self.opts.update(opts)
